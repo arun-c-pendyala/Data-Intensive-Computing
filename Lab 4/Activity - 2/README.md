@@ -1,6 +1,6 @@
 # Word Cooccurrence on Twitter Data
 
-1)use the tweets_syria.txt as input file for both the cases.
+Use the tweets_syria.txt as input file for both the cases - Pairs and Stripes Approach.
 
 INPUT: tweets_syria.txt
 

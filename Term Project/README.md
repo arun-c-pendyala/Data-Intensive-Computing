@@ -4,5 +4,6 @@ This is a group project. We built an interactive dashboard using the Imdb datase
 
 For more information, please read the brief report.
 
+R-shiny interactive app :  https://moviesdataset.shinyapps.io/imdb_rating/
 
 Tools used - Tableau and Rshiny

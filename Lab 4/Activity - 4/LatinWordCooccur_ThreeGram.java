@@ -49,7 +49,7 @@ public class LatinWordCooccur_ThreeGram {
 	
 	
 	
-	//here
+	
 	try{
 		if( meta_txt.length > 1 && !line.equals("") && !meta_txt[0].contains("\\,") ){
 			
@@ -61,7 +61,7 @@ public class LatinWordCooccur_ThreeGram {
 			meta_txt[0] = meta_txt[0].trim();
 			meta_txt[1] = meta_txt[1].trim();
 			
-			 String[] tokens = meta_txt[1].split("\\s+");
+			String[] tokens = meta_txt[1].split("\\s+");
 			
 			System.out.println(meta_tokens[0]+ ","+ meta_tokens[1]);
 			
@@ -90,10 +90,10 @@ public class LatinWordCooccur_ThreeGram {
 		   
 			ArrayList<String> lemma_arr_first ;
 			ArrayList<String> lemma_arr_sec;
-            ArrayList<String> lemma_arr_third;
+            		ArrayList<String> lemma_arr_third;
 			String first_word;
 			String second_word;
-            String third_word;
+            		String third_word;
 			String first_Second_third;
 			
 			
@@ -114,21 +114,21 @@ public class LatinWordCooccur_ThreeGram {
 					
 					lemma_arr_first = lemmaMap.get(tokens[j]);
 					lemma_arr_sec = lemmaMap.get(tokens[j+1]);
-                    lemma_arr_third = lemmaMap.get(tokens[j+2]);
+                    			lemma_arr_third = lemmaMap.get(tokens[j+2]);
 					
 						
 						
-						first_word = lemma_arr_first.get(0);
-						second_word = lemma_arr_sec.get(0);
-                    third_word = lemma_arr_third.get(0);
-						
-						first_Second_third = first_word +","+ second_word + "," + third_word;
-						
-						key_word.set(first_Second_third);
-						val_list.set(loc);
-						
-						context.write(key_word,val_list);
-						
+					first_word = lemma_arr_first.get(0);
+					second_word = lemma_arr_sec.get(0);
+					third_word = lemma_arr_third.get(0);
+
+					first_Second_third = first_word +","+ second_word + "," + third_word;
+
+					key_word.set(first_Second_third);
+					val_list.set(loc);
+
+					context.write(key_word,val_list);
+
 					
 					
 				}
@@ -136,7 +136,7 @@ public class LatinWordCooccur_ThreeGram {
 					if(!tokens[j].contains("")){
 						first_word = tokens[j];
 						second_word = tokens[j+1];
-                        third_word = tokens[j+2];
+                        			third_word = tokens[j+2];
 						
 						first_Second_third = first_word + "," + second_word + "," + third_word;
 						
@@ -157,7 +157,7 @@ public class LatinWordCooccur_ThreeGram {
 		}
 	}
 	catch(Exception e){
-		
+		e.printStackTrace();
 	}
 	
 	
